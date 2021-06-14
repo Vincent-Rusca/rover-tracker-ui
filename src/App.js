@@ -17,8 +17,8 @@ const App = () => {
   const [apiContactError, setApiContactError] = useState(defaultErrorState);
 
   const getData=(date)=>{
-    console.log('http://localhost:8080/MarsRoverTracker?date=' + date);
-    fetch('http://localhost:8080/MarsRoverTracker?date=' + date)
+    console.log('https://rover-tracker-api.herokuapp.com/MarsRoverTracker?date=' + date);
+    fetch('https://rover-tracker-api.herokuapp.com/MarsRoverTracker?date=' + date)
       .then(response => response.json())
       .then(myJson => {
         console.log(myJson);
