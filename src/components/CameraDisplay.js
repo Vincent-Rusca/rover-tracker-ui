@@ -14,6 +14,7 @@ const CameraDisplay = ({ cameras }) => {
     <Container className="pt-3 pb-3">
       <Accordion>
         {cameraKeys.map(key => {
+          if(cameras[key].photos === undefined) return null; // bugfix
           return(
             <Card bg="dark" border="warning" text="white">
               <Accordion.Toggle as={Card.Header} style={{cursor: 'pointer'}} eventKey={key}>
